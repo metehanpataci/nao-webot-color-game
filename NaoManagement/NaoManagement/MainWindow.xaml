@@ -1,0 +1,49 @@
+﻿<Window x:Class="NaoManagement.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NaoManagement"
+        mc:Ignorable="d"
+        Title="Nao Management" Height="442" Width="644">
+    <Canvas x:Name="MainCanvas" Margin="0,0,2,4">
+        <StackPanel Canvas.Left="20" Canvas.Top="320" Height="75" Width="614">
+            <GroupBox Header="Command" Margin="-10,3,10,3" Background="#FFF1EAEA" Height="62">
+                <Canvas Margin="0,0,-2,-13">
+                    <Label  x:Name="lblDemo" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="12" Canvas.Left="25" Canvas.Top="10" Width="277" Content="Listening"/>
+                </Canvas>
+            </GroupBox>
+        </StackPanel>
+        <StackPanel Canvas.Left="10" Canvas.Top="10" Height="310" Width="339">
+            <GroupBox Header="Color Game" Margin="3,3,19,3" Background="#FFF1EAEA" Height="302">
+                <Canvas Background="#FFF1E8E8" Height="142" Margin="0,0,12,0" >
+
+                    <Button Grid.ColumnSpan="2" FontSize="20" FontWeight="Bold" Canvas.Left="158" Canvas.Top="109" Width="138" RenderTransformOrigin="0.703,0.355" Click="Button_Click">Start Game</Button>
+
+                    <Label Name="userLabel" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14
+                           " Canvas.Left="26" Canvas.Top="4" Width="79">User Score</Label>
+                    <Label Name="RoborLabel" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="14
+                           " Canvas.Left="197" Canvas.Top="4" Width="96">Robot Score</Label>
+
+                    <TextBox x:Name="userScoreTextBox" Background="#FFF0BABA" Canvas.Left="10" Canvas.Top="33" Width="111" Height="40" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBox>
+                    <TextBox x:Name="robotScoreTextBox"  Background="#FFB4C3CF" Canvas.Left="181" Canvas.Top="33" Width="113" Height="40" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBox>
+
+                    <Label Grid.Row="3" FontSize="16" Canvas.Left="10" Canvas.Top="78" Width="79">Winner:</Label>
+                    <Label x:Name="winnerLabel" Content="" Canvas.Left="102" Canvas.Top="82" Width="181" Height="27"/>
+                </Canvas>
+            </GroupBox>
+        </StackPanel>
+        <GroupBox Header="" Height="303" Canvas.Left="349" Canvas.Top="17" Width="265" RenderTransformOrigin="0.5,0.5">
+            <Canvas Height="293" Width="265" HorizontalAlignment="Left"  Margin="0,-10,-12,-3" VerticalAlignment="Top" Background="#FFF1EAEA" >
+                <Button x:Name="TopButton" Content="Forward" Canvas.Left="95" Canvas.Top="31" Width="75" Height="50" Click="TopButton_Click" />
+                <Button x:Name="BackButton"  Content="Backward" Canvas.Left="96" Canvas.Top="211" Width="75" Height="50" Click="BackButton_Click"/>
+                <Button x:Name="LeftButton" Content="Left" Canvas.Left="10" Canvas.Top="116" Width="75" Height="50" Click="LeftButton_Click"/>
+                <Button x:Name="RightButton" Content="Right" Canvas.Left="180" Canvas.Top="116" Width="75" Height="50" Click="RightButton_Click"/>
+            </Canvas>
+        </GroupBox>
+
+
+
+
+    </Canvas>
+</Window>
